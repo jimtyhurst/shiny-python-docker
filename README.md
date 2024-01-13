@@ -2,6 +2,14 @@
 This is a trivial [Shiny](https://shiny.posit.co/) app for Python, 
 which is deployed in a [Docker](https://www.docker.com/) image.
 
+**Contents**
+
+- [Introduction](#introduction)
+- [Run Locally](#run-locally)
+- [License](#license)
+
+## Introduction
+
 The "Shiny" part of the app is from a [posit](https://posit.co/) tutorial:
 [Deploying a Shiny for Python application with Posit Connect](https://posit.co/blog/deploying-a-shiny-for-python-application-with-posit-connect/).
 
@@ -11,6 +19,13 @@ this example builds a [Docker](https://www.docker.com/) image,
 which can then be deployed in any environment that runs containers,
 such as Google [Cloud Run](https://cloud.google.com/run] or 
 AWS Elastic Container Service ([ECS](https://aws.amazon.com/ecs/]).
+
+## Run Locally
+To run this Shiny app locally in a terminal without using a Docker image:
+
+```bash
+shiny run ./app.py
+```
 
 ## License
 Copyright (c) 2024 Jim Tyhurst
