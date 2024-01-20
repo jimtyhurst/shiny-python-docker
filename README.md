@@ -1,13 +1,13 @@
 # shiny-python-docker
 
-The sole purpose of this project is to demonstrate how to deploy a [Shiny](https://shiny.posit.co/) app for Python in a [Docker](https://www.docker.com/) image. I could not find a sample Dockerfile in the [Shiny documentation](https://shiny.posit.co/py/docs/overview.html), so I created this simple example.
+The sole purpose of this project is to demonstrate how to deploy a [Shiny](https://shiny.posit.co/) app for Python in a [Docker](https://www.docker.com/) image. I could not find a sample Dockerfile in the [Shiny documentation](https://shiny.posit.co/py/docs/overview.html), so I created this simple example. When deployed, the Docker container will run a [uvicorn](https://www.uvicorn.org/) server, which serves the web application that was developed in Python.
 
 **Contents**
 
 - [Introduction](#introduction)
 - [Run Locally](#run-locally)
 - [Build a Docker image](#build-a-docker-image)
-- [Run the Docker image](#run-the-docker-image)
+- [Run the Docker image in your dev environment](#run-the-docker-image-in-your-dev-environment)
 - [License](#license)
 
 ## Introduction
@@ -44,13 +44,12 @@ To build a Docker image from the project's root directory:
 docker image build --pull --file './Dockerfile' --tag 'helloshinypython:latest' .
 ```
 
-## Run the Docker image
+## Run the Docker image in your dev environment
 
-Run the Docker image interactively:
+Run the Docker image interactively and view the web app in a browser directed to http://127.0.0.1:8080
 
 ```bash
 # Maps port 8000 in the container to port 8080 on the host machine.
-# View the app in browser on host machine at http://127.0.0.1:8080
 docker run -it --rm -p 8080:8000 helloshinypython:latest
 ```
 
