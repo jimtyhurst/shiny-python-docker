@@ -20,12 +20,30 @@ which can then be deployed in any environment that runs containers,
 such as Google [Cloud Run](https://cloud.google.com/run] or 
 AWS Elastic Container Service ([ECS](https://aws.amazon.com/ecs/]).
 
-## Run Locally
-To run this Shiny app locally in a terminal without using a Docker image:
+## Run locally
+To run this Shiny app locally in a terminal from the project's root directory
+without using a Docker image:
 
 ```bash
 shiny run ./app.py
 ```
+
+That command starts a Uvicorn server running on port 8000.
+Direct your browser to http://127.0.0.1:8000 to see the interactive web application.
+
+## Build a Docker image
+To build a Docker image from the project's root directory:
+
+```bash
+docker image build --pull --file './Dockerfile' --tag 'helloshinypython:latest' .
+```
+
+## Run the Docker image
+Run the Docker image interactively:
+
+```bash
+docker run -it --rm -p 8000:8000 helloshinypython:latest
+``````
 
 ## License
 Copyright (c) 2024 Jim Tyhurst
