@@ -1,4 +1,3 @@
 matplotlib
-pandas
-rsconnect-python
+numpy
 shiny
