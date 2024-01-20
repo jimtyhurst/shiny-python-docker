@@ -1,12 +1,13 @@
 # shiny-python-docker
 
-This is a trivial [Shiny](https://shiny.posit.co/) app for Python,
-which is deployed in a [Docker](https://www.docker.com/) image.
+The sole purpose of this project is to demonstrate how to deploy a [Shiny](https://shiny.posit.co/) app for Python in a [Docker](https://www.docker.com/) image. I could not find a sample Dockerfile in the [Shiny documentation](https://shiny.posit.co/py/docs/overview.html), so I created this simple example.
 
 **Contents**
 
 - [Introduction](#introduction)
 - [Run Locally](#run-locally)
+- [Build a Docker image](#build-a-docker-image)
+- [Run the Docker image](#run-the-docker-image)
 - [License](#license)
 
 ## Introduction
