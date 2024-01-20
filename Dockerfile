@@ -1,6 +1,9 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
 FROM python:3.10-slim
 
+# Container will expose the endpoint on port 8000
+EXPOSE 8000
+
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
 
@@ -22,9 +25,5 @@ rm /app/requirements.txt
 EOF
 USER appuser
 
-# 'shiny run' exposes an endpoint
-EXPOSE 8080
-
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-#CMD ["shiny", "run", "--port", "8080", "app.py"]
-CMD ["uvicorn", "app:app", "--host", "127.0.0.1", "--port", "8080"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
