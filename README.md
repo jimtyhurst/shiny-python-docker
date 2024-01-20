@@ -22,7 +22,7 @@ which can then be deployed in any environment that runs containers,
 such as Google [Cloud Run](https://cloud.google.com/run) or
 AWS Elastic Container Service ([ECS](https://aws.amazon.com/ecs/)).
 
-Much of the [Dockerfile](./Dockerfile) is taken from Peter Solymos' (no date) blog post, [Containerizing Shiny for Python and Shinylive Applications](https://hosting.analythium.io/containerizing-shiny-for-python-and-shinylive-applications/) based on `shiny` alpha version 0.2.7. I started this project with `shiny` [version 0.6.1.1](https://pypi.org/project/shiny/), which is a production release.
+Much of the [Dockerfile](./Dockerfile) is taken from Peter Solymos' (2022-10-05) blog post, [Containerizing Shiny for Python and Shinylive Applications](https://hosting.analythium.io/containerizing-shiny-for-python-and-shinylive-applications/) based on `shiny` alpha version 0.2.7. I started this project with `shiny` [version 0.6.1.1](https://pypi.org/project/shiny/), which was released after the 2023-04-18 [announcement of general availability](https://shiny.posit.co/blog/posts/shiny-python-general-availability/).
 
 ## Run locally
 
