@@ -8,6 +8,7 @@ The sole purpose of this project is to demonstrate how to deploy a [Shiny](https
 - [Run Locally](#run-locally)
 - [Build a Docker image](#build-a-docker-image)
 - [Run the Docker image in your dev environment](#run-the-docker-image-in-your-dev-environment)
+- [Deploy the app to Google Cloud Run](#deploy-the-app-to-google-cloud-run)
 - [License](#license)
 
 ## Introduction
@@ -52,6 +53,20 @@ Run the Docker image interactively and view the web app in a browser directed to
 # Maps port 8000 in the container to port 8080 on the host machine.
 docker run -it --rm -p 8080:8000 helloshinypython:latest
 ```
+
+## Deploy the app to Google Cloud Run
+
+From the root directory of the project:
+
+```bash
+gcloud run deploy
+```
+
+- Look in the [Cloud Build console](https://console.cloud.google.com/cloud-build/builds) for information about the build from source.
+- Cloud Build generates logs that are stored in the project's [Cloud Storage](https://console.cloud.google.com/storage/browser) buckets.
+- The logs can be viewed in the [Logging > Logs explorer console](https://console.cloud.google.com/monitoring).
+- Look in the [Artifact Registry console](https://console.cloud.google.com/artifacts) to see the Docker image that was created.
+- Look in the [Cloud Run console](https://console.cloud.google.com/run) to see information about the deployed service.
 
 ## License
 
